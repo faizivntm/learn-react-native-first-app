@@ -1,22 +1,13 @@
-import { useState } from "react";
 import "./App.css";
 import Main from "./components/Main";
-import CleanUpFunction from "./materi/hooks-with-useeffect/CleanUpFunction";
+import UserList from "./materi/consume-api-crud/UserList";
 
 function App() {
-  const [showInterval, setShowInterval] = useState<boolean>(true);
   return (
     <>
       {/* <Header /> */}
       <Main>
-        <button
-          onClick={() => {
-            setShowInterval((prev) => !prev);
-          }}
-        >
-          {showInterval ? "Remove interval" : "setInterval"}
-        </button>
-        {showInterval && <CleanUpFunction />}
+        <UserList />
       </Main>
       {/* <Footer /> */}
     </>
